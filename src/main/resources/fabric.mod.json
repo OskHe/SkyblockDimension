@@ -2,25 +2,31 @@
   "schemaVersion": 1,
   "id": "skyblockdimension",
   "version": "${version}",
-
   "name": "SkyblockDimension",
   "description": "Adds a set of skyblock dimensions.",
-  "authors": [],
-  "contact": {},
-
+  "authors": [
+    "OskHe"
+  ],
+  "contact": {
+    "repo": "https://github.com/OskHe/SkyblockDimension"
+  },
   "license": "GPL-3.0",
   "icon": "assets/skyblockdimension/icon.png",
-
   "environment": "server",
-  "entrypoints": {},
-
-      "mixins": [
-        "skyblockdimension.mixins.json"
-      ],
-
+  "entrypoints": {
+    "client": [
+      "com.oskhe.skyblockdimension.client.SkyblockDimensionClient"
+    ],
+    "main": [
+      "com.oskhe.skyblockdimension.SkyblockDimension"
+    ]
+  },
+  "mixins": [
+    "skyblockdimension.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-        "fabric": "*",
+    "fabric": "*",
     "minecraft": "${minecraft_version}"
   }
 }
